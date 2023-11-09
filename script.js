@@ -6,12 +6,12 @@ search.addEventListener("keyup", e => {
         let searchValue = search.value.toLowerCase();
         images.forEach(image => {
             if (searchValue === image.dataset.name) {
-                image.style.opacity = 0; // Start with zero opacity
+                image.style.opacity = 0;
                 image.style.display = "block";
-                // Apply a fade-in animation using CSS transitions
+                
                 setTimeout(() => {
                     image.style.opacity = 1;
-                }, 10); // You can adjust the animation duration (10ms in this case)
+                }, 10);
             } else {
                 image.style.display = "none";
             }
